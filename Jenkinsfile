@@ -7,7 +7,7 @@ pipeline{
                     image 'openjdk:11'
                 }
             }
-            step{
+            steps{
                 script{
                     withSonarQubeEnv(credentialsId: 'sonar-token') {
                         sh 'chmod +x gradlew'
